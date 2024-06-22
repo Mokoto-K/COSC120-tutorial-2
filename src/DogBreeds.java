@@ -15,35 +15,28 @@ public class DogBreeds {
         String[] dogBreeds = {"bulldog", "dalmatian", "jack russell terrier", "moodle", "Yorkshite terrier",
                 "golden retriever", "BULL terrier", "pomeranion","pit bull terrier", "Siberian husky"};
 
-        Scanner keys = new Scanner(System.in);
-        String password = keys.next();
 
-        while (!password.equals("0") && password.length() < 8 || password.length() > 20) {
-            System.out.println("Inlavid");
-            password = keys.next();
+        // iterates through all strings in the array and changes all chars to lowercase
+        for (int i=0;i<dogBreeds.length;i++) {
+            String tempDogName = dogBreeds[i];
+            dogBreeds[i] = tempDogName.toLowerCase();
         }
 
-//        // iterates through all strings in the array and changes all chars to lowercase
-//        for (int i=0;i<dogBreeds.length;i++) {
-//            String tempDogName = dogBreeds[i];
-//            dogBreeds[i] = tempDogName.toLowerCase();
-//        }
-//
-//        // prints out items in the array
-//        System.out.println("********ALL BREEDS*********");
-//        for (String doggies : dogBreeds) {
-//            System.out.println(doggies);
-//        }
-//
-//        // selecting specific elements in an array and printing
-//        System.out.println("\n********TERRIERS*********");
-//        for (String doggies : dogBreeds) {
-//            // Using nested if statements to require the specifically asked for output
-//            if (doggies.contains("terrier")) {
-//                if (!doggies.contains("pit bull terrier")) {
-//                    System.out.println(doggies);
-//                }
-//            }
-//        }
+        // prints out items in the array
+        System.out.println("********ALL BREEDS*********");
+        for (String doggies : dogBreeds) {
+            System.out.println(doggies);
+        }
+
+        // selecting specific elements in an array and printing
+        System.out.println("\n********TERRIERS*********");
+        for (String doggies : dogBreeds) {
+            // Using nested if statements to require the specifically asked for output
+            if (doggies.contains("terrier")) {
+                if (!doggies.contains("pit bull terrier")) {
+                    System.out.println(doggies);
+                }
+            }
+        }
     }
 }
